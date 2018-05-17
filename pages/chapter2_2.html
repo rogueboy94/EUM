@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Электронный учебный модуль</title>
+	<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+		<header>
+			<nav class="top-nav container">
+					<div class="top-left-nav">
+						<ul>
+							<li><a class="left-nav" href="../pages/chapter2_1.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+							<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+							<li><a class="right-nav" href="../pages/chapter3_1.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+						</ul>
+					</div>
+					<div class="top-right-nav">
+						<ul>
+							<li>Мамедкулыев Курбан Олегович, <i>ИКМО 01-16</i></li>
+							<li><a href="../pages/help.html"><img src="../images/logos/help.png" width="36px" height="36px"/>Помошь</a></li>
+						</ul>
+					</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="content">
+				<h1 class="part-header">Часть 2. Классификация систем массового обслуживания</h1>
+				<div class="main-content">
+					<p>
+						Если изучены или заданы входящие потоки требований, механизм (число каналов обслуживания, продолжительность обслуживания и т. д.) и дисциплина обслуживания, то это дает основание для построения математической модели системы.
+					</p>
+
+					<p>	В задачах анализа систем массового обслуживания в качестве основных показателей функционирования системы могут быть использованы:
+					</p>
+					<p>	- вероятность простоя канала обслуживания P0;</p>	
+					<p>	- вероятность того, что в системе находится n требований, Pn;</p>
+					<p>	- среднее время ожидания требований в очереди Tоч;</p>
+					<p>	- среднее время ожидания требований в системе Tсист;</p>
+					<p>	- для разомкнутой системы Tоч = Nоч/λ, где λ - интенсивность поступления потока требований в систему;</p>
+					<p>	- для замкнутой системы Tоч = Nоч/ (λ (m - Nоч)), где m – число требований, нуждающихся в обслуживании;
+					</p>
+					<select id="list">
+					    <option value="" disabled="disabled" selected="selected">Выберите формулу</option>
+					    <option class="options" value="../images/files/f1.jpg">-среднее число требований, находящихся в системе(сфере обслуживания)</option>
+					  
+					    <option class="options" value="../images/files/f2.jpg">-среднее число требований, находящихся в очереди</option>
+					    
+					    <option class="options" value="../images/files/f3.jpg">-среднее число свободных каналов обслуживания</option>
+					    
+					    <option class="options" value="../images/files/f4.jpg">-среднее число каналов обслуживания</option>
+					</select>
+					<img id="formula" src="./" width="400px" height="250px"/>
+					<a id="image_maximizer_link" href="" target="_blank">Увеличить изображение на большой экран</a>
+				</div>
+			</div>
+			<nav class="bottom-nav">
+				<ul>
+					<li><a class="left-nav" href="../pages/chapter2_1.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+					<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+					<li><a class="right-nav" href="../pages/chapter3_1.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+				</ul>
+			</nav>
+		</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/custom.js"></script>
+
+</body>
+</html>

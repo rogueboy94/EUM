@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Электронный учебный модуль</title>
+	<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+		<header>
+			<nav class="top-nav container">
+					<div class="top-left-nav">
+						<ul>
+							<li><a class="left-nav" href="../pages/chapter3_2.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+							<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+							<li><a class="right-nav" href="../pages/questions.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+						</ul>
+					</div>
+					<div class="top-right-nav">
+						<ul>
+							<li>Мамедкулыев Курбан Олегович, <i>ИКМО 01-16</i></li>
+							<li><a href="../pages/help.html"><img src="../images/logos/help.png" width="36px" height="36px"/>Помошь</a></li>
+						</ul>
+					</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="content">
+				<div class="main-content">
+					<h1>Часть 3. Задачи анализа</h1>
+					<h1>Задача анализа замкнутой системы с ожиданием</h1>
+					<button type="button" class="content-opener">Постановка задачи</button>
+					<div>
+						<p>
+							Пусть исследуется некоторая замкнутая система массового обслуживания с ограниченным количеством требований в системе, т.е. обслуженные требования вновь возвращаются в систему обслуживания (например, экскаватор или автосамосвал). Интенсивность поступления одного требования в систему известна и равна λ. Интенсивность обслуживания требований известна и равна μ. Число требований, нуждающихся в обслуживании, равна m. Требуется определить основные характеристики системы :
+						</p>
+						<p>- вероятность простоя канала обслуживания, P0;</p>
+						<p>- вероятность того, что в системе имеется n требований, Pn;</p>
+						<p>- среднее число требований, находящихся в системе, Nсист;</p>
+						<p>- среднее число требований, находящихся в очереди, Nоч;</p>
+						<p>- среднее время ожидания требования в очереди, Tоч;</p>
+						<p>- среднее время ожидания требования в системе, Tсист.</p>
+					</div>
+					<button type="button" class="content-opener">Выявление основных особенностей, взаимосвязей и количественных закономерностей</button>
+					<div>
+						<p>Состояние системы будем связывать с числом требований, находящихся в системе. При этом возможны два состояния системы :</p>
+
+						<p>- число требований, поступивших в систему, n=0, т.е. канал обслуживания простаивает;</p>
+
+						<p>- число требований, поступивших в систему, 0 < n ≤ m.</p>
+
+						<p>Размеченный граф состояний системы представлен на <button type="button" class="toggle merged">рисунке</button> </p>
+						<img class="content-opener disable" src="../images/files/chapter3_3_formula1.jpg" />
+					</div>
+					<button type="button" class="content-opener">Построение математической модели</button>
+					<div>
+						<p>В соответствии с размеченным графом состояний и используя мнемоническое правило, запишем систему дифференциальных уравнений для вероятностей состояний: <img src="../images/files/f11.jpg" width="500px" height="200px"/></p>						
+					</div>
+					<button type="button" class="content-opener">Исследование математической модели</button>
+					<div>
+						<p>Ограничимся исследованием установившегося режима работы системы. Тогда: dPn(t)/dt = 0, n=0,1,...m.</p>
+						<p>Вместо системы обыкновенных дифференциальных уравнений получаем систему алгебраических уравнений :
+
+mλP0-μP1=0;</p>
+
+						<p>...</p>
+
+						<p>[(m-n)λ+μ]Pn-(m-n+1)λPn-1-μPn+1=0;</p>
+
+						<p>...</p>
+
+						<p>μPm-λPm-1=0.</p>
+
+						<p>Для 0 < n ≤ m нетрудно получить рекуррентную формулу :</p>
+
+						<p>при n=0: P1=mλ/μ·P0=mψP0;</p>
+
+						<p>при n=1: P2=1/μ·{[(m-1)λ+μ]P1-mλP0}=[(m-1)ψ+1]P1-mψP0=(m-1)ψP1;</p>
+
+						<p>при n=2: P3=1/μ·{[(m-2)λ+μ]P2-(m-1)λP1}=[(m-2)ψ+1]P2-(m-1)ψP1=(m-2)ψP2;</p>
+
+						<p>...</p>
+
+						<p>Pn=(m-n+1)ΨPn-1.</p>
+
+						<p>Вероятность того, что в системе находится n требований составит: Pn=(m-n+1)ψ(m-n+2)ψ…(m-1)ψmψP0=P0·m!·ψn/(m-n)! .</p>
+
+						<p>Окончательно получим P2=Ψ3P0 и т.д.</p>
+
+						<p>Используя равенство <img src="../images/files/f12.jpg" width="300px" height="100px"/> можно получить выражение для P0.</p>
+						<p>Вероятность простоя канала обслуживания:<img src="../images/files/f13.jpg" width="200px" height="100px"/> </p>
+						<p>Среднее число требований, находящихся в очереди: <img src="../images/files/f14.jpg" width="500px" height="100px"/></p>
+						<p>Среднее число требований, находящихся в системе: <img src="../images/files/f15.jpg" width="500px" height="100px"/></p>
+
+						<p>Среднее время ожидания требования в очереди Tоч= Nоч / λ(m-Nоч)=1/μ [(m / (1- P0)) – ((1+ψ) / ψ)].</p>
+
+						<p>Среднее время ожидания требования в системе Tсист= Nсист / λ(m-Nсист)=1/μ [(m / (1- P0)) – (1 / ψ)].</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="bottom-nav">
+			<ul>
+				<li><a class="left-nav" href="../pages/chapter3_2.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+				<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+				<li><a class="right-nav" href="../pages/questions.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+			</ul>
+		</nav>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/custom.js"></script>
+</body>
+</html>

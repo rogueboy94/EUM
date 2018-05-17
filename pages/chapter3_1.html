@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Электронный учебный модуль</title>
+	<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+		<header>
+			<nav class="top-nav container">
+					<div class="top-left-nav">
+						<ul>
+							<li><a class="left-nav" href="../pages/chapter3.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+							<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+							<li><a class="right-nav" href="../pages/chapter3_2.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+						</ul>
+					</div>
+					<div class="top-right-nav">
+						<ul>
+							<li>Мамедкулыев Курбан Олегович, <i>ИКМО 01-16</i></li>
+							<li><a href="../pages/help.html"><img src="../images/logos/help.png" width="36px" height="36px"/>Помошь</a></li>
+						</ul>
+					</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="content">
+				<div class="main-content">
+					<h1>Часть 3. Задачи анализа</h1>
+					<h1>Задача анализа детерминированной системы</h1>
+					<button type="button" class="content-opener">Постановка задачи</button>
+					<div>
+						<p>
+							Пусть исследуется производственный процесс, в котором поступление требований происходит через равные промежутки времени Δtп=const (т.е. интенсивность потока поступлений требований λ=1/Δtп=const) и обслуживание производится через равные промежутки времени Δtоб=const (т.е. интенсивность обслуживания μ=1/Δtоб=const). Имеется один канал обслуживания. Предполагается, что Δtоб/Δtп=λ/μ<1 (в противном случае очередь будет бесконечно возрастать) и что к началу обслуживания в системе имеется уже n требований. Определить через какое время очередь исчезнет.
+						</p>
+					</div>
+					<button type="button" class="content-opener">Выявление основных особенностей, взаимосвязей и количественных закономерностей</button>
+					<div>
+						<p>Величину Ψ=λ/μ называют коэффициентом использования. Очередь будет бесконечно возрастать, если Ψ>1, если же Ψ=1, то очередь будет иметь постоянную длину. Схематически работа рассматриваемой системы массового обслуживания представлена на <button type="button" class="toggle merged">рисунке</button></p>
+						
+						<img class="content-opener disable" src="../images/files/chapter3_1_formula1.jpg" width="900px" height="300px"/>
+						<p>Пока обслуживается очередь из n требований в течение времени t=nΔtоб, вновь поступит на обслуживание n1 требований: n1= t/Δtп=n·Δtоб/Δtп=n·λ/μ=n·Ψ.
+						</br>
+						Аналогично, пока будут обслуживаться n1 требований, в течение времени t1=n1Δtоб, дополнительно поступит на обслуживание n2 требований: n2= t1/Δtп=n1·Δtоб/Δtп=n1·λ/μ=n1·Ψ=n·Ψ2.</p>
+					</div>
+					<button type="button" class="content-opener">Построение математической модели</button>
+					<div>
+						<p>
+							Время, через которое очередь исчезнет, можно представить в таком виде :
+						</p>
+						<img src="../images/files/f5.jpg" width="300px" height="100px"/>
+					</div>
+					<button type="button" class="content-opener">Исследование математической модели</button>
+					<div>
+						<p>
+							Для определения времени, через которое очередь исчезнет, необходимо раскрыть математическую модель:
+						</p>
+						<img src="../images/files/f6.jpg"/>
+						<p>В модели использована формула геометрической прогрессии. Чем ближе интенсивность потока λ к интенсивности обслуживания μ, тем через больший промежуток времени исчезнет очередь (при λ/μ<1). Членом Ψк+1 можно для упрощения расчетов пренебречь, тогда T ≈ n / (μ-λ).
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="bottom-nav">
+			<ul>
+				<li><a class="left-nav" href="../pages/chapter3.html" target="_self"><img src="../images/navigation/arrow_left.png" /></a></li>
+				<li><a class="home-nav" href="../index.html" target="_self"><img src="../images/navigation/homes.png" /></a></li>
+				<li><a class="right-nav" href="../pages/chapter3_2.html" target="_self"><img src="../images/navigation/arrow_right.png" /></a></li>
+			</ul>
+		</nav>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/custom.js"></script>
+</body>
+</html>
